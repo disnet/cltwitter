@@ -1,3 +1,11 @@
+/**
+ * cltwitter
+ *
+ * Runs javascript filters on twitter streams
+ *
+ * Copyright (c) 2009 Tim Disney
+ * Licensed under the MIT license
+ */
 importPackage(java.net);
 
 var commandFilters = {

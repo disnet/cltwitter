@@ -1,3 +1,11 @@
+/**
+ * cltwitter
+ *
+ * Runs javascript filters on twitter streams
+ *
+ * Copyright (c) 2009 Tim Disney
+ * Licensed under the MIT license
+ */
 TestCase("filtersTest", {
   should_expand_shortened_url : function() {
     assertEquals("http://en.m.wikipedia.org/wiki/Philosophical_zombie",

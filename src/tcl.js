@@ -1,3 +1,11 @@
+/**
+ * cltwitter
+ *
+ * Runs javascript filters on twitter streams
+ *
+ * Copyright (c) 2009 Tim Disney
+ * Licensed under the MIT license
+ */
 function TCL(username, password) {
   this.twitter = new Twitter(username, password);
   this.filters = commandFilters;

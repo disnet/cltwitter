@@ -1,9 +1,15 @@
+/**
+ * cltwitter
+ *
+ * Runs javascript filters on twitter streams
+ *
+ * Copyright (c) 2009 Tim Disney
+ * Licensed under the MIT license
+ */
 load("src/tcl.js");
 load("lib/functional.js");
 load("lib/mootools.js");
 importPackage(Packages.twitter4j);
-
-if(1==2) { // don't want to be running tests that hit twitter all the time, causes api overruns
 
 TestCase("IntegrationTests", {
   should_get_timeline_for_all : function() {
@@ -20,4 +26,3 @@ TestCase("IntegrationTests", {
   }
 
 });
-}

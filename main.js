@@ -1,3 +1,11 @@
+/**
+ * cltwitter
+ *
+ * Runs javascript filters on twitter streams
+ *
+ * Copyright (c) 2009 Tim Disney
+ * Licensed under the MIT license
+ */
 importPackage(Packages.twitter4j);
 
 load("lib/functional.js");
