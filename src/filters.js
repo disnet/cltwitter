@@ -7,10 +7,8 @@
  * Licensed under the MIT license
  */
 importPackage(java.net);
-
-function post(url, description) {
-    print("Posting url: " + url + " with description: " + description);
-}
+importPackage(java.util);
+importPackage(Packages.del.icio.us);
 
 var commandFilters = {
     stripUrls: function(s) {
@@ -45,6 +43,16 @@ var commandFilters = {
     },
 
     postLinksToDelicious : function(s) {
+        function post(url, description) {
+            var prop = new Properties();
+            prop.load(new FileInputStream("config.properties"));
+            var username = prop.getProperty("delicious.username");
+            var password = prop.getProperty("delicious.password");
+
+            var delicious = new Delicious(username, password);
+            delicious.addPost(url, description, "", "fromcltwitter", new Date());
+        }
+
         var urls = s.match(/(http:\/\/[^\s]*)/g);
         if(urls !== null) {
             for(var i = 0; i < urls.length; i++) {
@@ -53,5 +61,6 @@ var commandFilters = {
                 }
             }
         }
+        return s;
     }
 };
